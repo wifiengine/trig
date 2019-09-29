@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>TRIG</title>
+        <style>
+            #sin {
+                margin: 3%;
+            }
+            .sct {
+                width: 20%;
+                height: 5%;
+                margin: 3%;
+                padding: 4%;
+                background: green;
+            }
+            .sct:hover {
+                background: greenyellow;
+            }
+            h1 {
+                font-family: arial;
+            }
+            #link {
+                font-family: arial;
+                list-style-type: none;
+                color: green;
+                font-size: 21px;
+                border: 4px solid red;
+                padding: 5px;
+                margin-left: 3%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>RADIANS</h1>
+        <form>
+            <p>Type in the value that you want.</p>
+            <input type="number" id="sin">
+            <div id="button" class="sct">sin</div>
+            <div id="button2" class="sct">cos</div>
+            <div id="button3" class="sct">tan</div>
+            <p id="answer"></p>
+            <br>
+            <a href="deg.html" id="link">degrees</a>
+        </form>
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <script>
+            var num = document.getElementById("sin");
+            var ans = document.getElementById("answer");
+            var button = document.getElementById("button");
+
+           button.onclick = function() {
+                ans.innerHTML = Math.sin(num.value);
+                console.log(Math.sin(num.value));
+            };
+            button2.onclick = function() {
+                ans.innerHTML = Math.cos(num.value);
+                console.log(Math.cos(num.value));
+            };
+            button3.onclick = function() {
+                ans.innerHTML = Math.tan(num.value);
+                console.log(Math.tan(num.value));
+            };
+            
+
+
+        </script>
+    </body>
+</html>
